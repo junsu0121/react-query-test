@@ -2,17 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { QueryClientProvider, QueryClient } from "react-query";
-import { ReactQueryDevtools } from "react-query/devtools";
+import { RecoilRoot } from "recoil";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-export const queryClient = new QueryClient();
 root.render(
   // <React.StrictMode>
-  <QueryClientProvider client={queryClient}>
-    <ReactQueryDevtools initialIsOpen={true} />
+  <RecoilRoot>
     <App />
-  </QueryClientProvider>
+  </RecoilRoot>
   // </React.StrictMode>
 );
 
